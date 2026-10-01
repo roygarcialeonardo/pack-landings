@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pack Landings Bilingües — 3 plantillas ES/EN por $19</title>
+<meta name="description" content="3 landing pages premium bilingües (español/inglés) en un solo archivo HTML cada una. Sin mensualidades, tuyas para siempre. $19 USDT." />
+<style>
+  :root{--bg:#0b0e17;--card:#141a2e;--line:#263053;--txt:#eef1f8;--mut:#9aa5c0;--acc:#f5a524;--acc2:#ffd166;--grn:#3ddc97;--r:16px}
+  *{box-sizing:border-box}html{scroll-behavior:smooth}
+  body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--txt);line-height:1.65}
+  .wrap{max-width:1020px;margin:0 auto;padding:0 22px}
+  header{position:sticky;top:0;z-index:20;background:rgba(11,14,23,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;padding:13px 22px}
+  .logo{font-weight:800}.logo span{color:var(--acc)}
+  nav{display:flex;gap:14px;align-items:center}
+  .lang{display:flex;border:1px solid var(--line);border-radius:20px;overflow:hidden}
+  .lang button{background:none;border:none;color:var(--mut);padding:6px 12px;cursor:pointer;font-size:.78rem;font-weight:700}
+  .lang button.on{background:var(--acc);color:#111}
+  .btn{display:inline-block;background:var(--acc);color:#141414;font-weight:800;padding:14px 32px;border-radius:12px;text-decoration:none;border:none;cursor:pointer;font-size:1.05rem}
+  .btn:hover{background:var(--acc2)}
+  .hero{padding:84px 0 50px;text-align:center;background:radial-gradient(760px 360px at 50% -70px,rgba(245,165,36,.13),transparent)}
+  .badge{display:inline-block;background:rgba(61,220,151,.12);border:1px solid var(--grn);color:var(--grn);border-radius:20px;padding:6px 18px;font-size:.85rem;margin-bottom:20px;font-weight:700}
+  h1{font-size:clamp(2rem,5.2vw,3.2rem);line-height:1.14;margin:0 0 16px}
+  h1 em{font-style:normal;color:var(--acc)}
+  .sub{color:var(--mut);font-size:1.13rem;max-width:640px;margin:0 auto 30px}
+  .tpacks{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:18px;margin:10px 0 8px}
+  .tp{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden}
+  .tp .pv{height:190px;display:flex;align-items:center;justify-content:center;font-size:3.4rem;font-weight:800}
+  .tp .bd{padding:24px}
+  .tp h3{margin:0 0 8px}.tp p{color:var(--mut);font-size:.92rem;margin:0 0 14px}
+  .tp .demo{color:var(--acc);font-weight:700;text-decoration:none;font-size:.92rem}
+  .inc{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:34px;max-width:760px;margin:26px auto}
+  .inc ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .inc li{color:var(--mut);font-size:.95rem}.inc li::before{content:"✓ ";color:var(--grn);font-weight:800}
+  section{padding:48px 0}
+  h2{font-size:1.8rem;text-align:center;margin:0 0 10px}
+  .lead{color:var(--mut);text-align:center;max-width:640px;margin:0 auto 30px}
+  .buy{background:var(--card);border:2px solid var(--acc);border-radius:22px;padding:40px;max-width:620px;margin:0 auto}
+  .buy .pr{font-size:3.2rem;font-weight:800;text-align:center;margin:4px 0}
+  .buy .pr small{font-size:1rem;color:var(--mut);font-weight:400}
+  .was{text-align:center;color:var(--mut);text-decoration:line-through;font-size:1.1rem}
+  .steps3{counter-reset:b;margin:26px 0}
+  .bstep{display:flex;gap:16px;margin:16px 0;align-items:flex-start}
+  .bstep::before{counter-increment:b;content:counter(b);background:var(--acc);color:#111;font-weight:800;width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex:none}
+  .wallet{background:var(--bg);border:1px dashed var(--acc);border-radius:12px;padding:16px;font-family:monospace;font-size:.85rem;word-break:break-all;margin:10px 0;color:var(--acc2)}
+  .cbtn{display:flex;gap:10px;justify-content:center;margin-top:18px;flex-wrap:wrap}
+  details{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 20px;margin:10px auto;max-width:740px}
+  summary{cursor:pointer;font-weight:700}details p{color:var(--mut)}
+  .guar{text-align:center;color:var(--mut);font-size:.92rem;margin-top:22px}
+  footer{border-top:1px solid var(--line);padding:26px 0;color:var(--mut);font-size:.85rem;text-align:center}
+  @media(max-width:640px){.inc ul{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header><div class="wrap">
+  <div class="logo">PACK<span>LANDINGS</span></div>
+  <nav>
+    <a class="btn" style="padding:9px 20px;font-size:.9rem" href="#comprar" data-i18n="navb">Comprar — $19</a>
+    <div class="lang"><button id="bES" class="on">ES</button><button id="bEN">EN</button></div>
+  </nav>
+</div></header>
+
+<div class="hero"><div class="wrap">
+  <div class="badge" data-i18n="badge">🔥 Lanzamiento — 50% de descuento</div>
+  <h1 data-i18n="h1">3 landings premium <em>bilingües.</em><br/>Tuyas para siempre.</h1>
+  <p class="sub" data-i18n="sub">Plantillas profesionales español/inglés con un clic, listas para vender, captar clientes o lanzar tu negocio. Un solo archivo HTML cada una — sin WordPress, sin mensualidades, sin complicaciones.</p>
+  <a class="btn" href="#comprar" data-i18n="cta">Quiero el pack — $19</a>
+  <div class="guar" data-i18n="mini">Pago único · Entrega en menos de 12 horas · Actualizaciones incluidas</div>
+</div></div>
+
+<div class="wrap"><section>
+  <h2 data-i18n="t_t">Qué incluye el pack</h2>
+  <p class="lead" data-i18n="t_l">Tres diseños distintos, tres nichos distintos. Abre la demo de cada uno:</p>
+  <div class="tpacks">
+    <div class="tp">
+      <div class="pv" style="background:linear-gradient(135deg,#1a2140,#0e1330);color:#9aa5ff">◈</div>
+      <div class="bd"><h3 data-i18n="t1t">1 · Pulso — SaaS / Producto</h3><p data-i18n="t1b">Landing oscura premium para apps y productos digitales: hero, funciones, precios, testimonios y FAQ.</p><a class="demo" href="template-saas/index.html" target="_blank" data-i18n="demo">Ver demo →</a></div>
+    </div>
+    <div class="tp">
+      <div class="pv" style="background:linear-gradient(135deg,#faf7f2,#e8dcc8);color:#c4552d">✎</div>
+      <div class="bd"><h3 data-i18n="t2t">2 · Estudio — Freelancer</h3><p data-i18n="t2b">Portafolio elegante para creativos y consultores: servicios con precios, trabajos y contacto.</p><a class="demo" href="template-freelancer/index.html" target="_blank" data-i18n="demo">Ver demo →</a></div>
+    </div>
+    <div class="tp">
+      <div class="pv" style="background:linear-gradient(135deg,#8b5a2b,#5e3c1c);color:#ffe9c9">☕</div>
+      <div class="bd"><h3 data-i18n="t3t">3 · Aroma — Negocio local</h3><p data-i18n="t3b">Para cafés, restaurantes y tiendas: menú con precios, galería, reseñas y botón de WhatsApp.</p><a class="demo" href="template-cafe/index.html" target="_blank" data-i18n="demo">Ver demo →</a></div>
+    </div>
+  </div>
+  <div class="inc"><ul>
+    <li data-i18n="i1">Interruptor ES/EN en las 3 plantillas</li>
+    <li data-i18n="i2">Formularios de captura configurables</li>
+    <li data-i18n="i3">100% responsive (móvil perfecto)</li>
+    <li data-i18n="i4">SEO básico incluido</li>
+    <li data-i18n="i5">Guía de personalización en español</li>
+    <li data-i18n="i6">Úsalas en proyectos ilimitados</li>
+  </ul></div>
+</section></div>
+
+<div class="wrap"><section id="comprar" style="padding-top:10px">
+  <h2 data-i18n="b_t">Cómo comprar</h2>
+  <p class="lead" data-i18n="b_l">Sin plataformas, sin cuentas, sin esperas.</p>
+  <div class="buy">
+    <div class="was">$38</div>
+    <div class="pr">$19 <small>USDT</small></div>
+    <div class="steps3">
+      <div class="bstep"><div><b data-i18n="b1t">Envía 19 USDT (red TRC20)</b><br/><span style="color:var(--mut);font-size:.9rem" data-i18n="b1b">a esta dirección:</span>
+        <div class="wallet">TBAMgPefcgznuNkanfWmxEkRx6LAmKchUT</div></div></div>
+      <div class="bstep"><div><b data-i18n="b2t">Envíame el comprobante</b><br/><span style="color:var(--mut);font-size:.9rem" data-i18n="b2b">por Telegram con tu email:</span><br/>
+        <a href="https://t.me/slipknot1993cuba" style="color:var(--acc);font-weight:700">@slipknot1993cuba</a></div></div>
+      <div class="bstep"><div><b data-i18n="b3t">Recibe el ZIP</b><br/><span style="color:var(--mut);font-size:.9rem" data-i18n="b3b">Te envío el pack completo + guía en menos de 12 horas.</span></div></div>
+    </div>
+    <div class="cbtn">
+      <a class="btn" href="https://t.me/slipknot1993cuba" data-i18n="b_cta">Ya pagué — enviar comprobante</a>
+    </div>
+    <div class="guar" data-i18n="b_g">¿Dudas antes de comprar? Escríbeme por Telegram, respondo yo mismo.</div>
+  </div>
+</section></div>
+
+<div class="wrap"><section>
+  <h2 data-i18n="f_t">Preguntas</h2>
+  <details><summary data-i18n="q1">¿Necesito saber programar?</summary><p data-i18n="a1">No. Cada plantilla tiene comentarios en español marcando qué editar: textos, colores, precios y fotos. Si sabes copiar y pegar, puedes personalizarla.</p></details>
+  <details><summary data-i18n="q2">¿Puedo usarlas en proyectos de clientes?</summary><p data-i18n="a2">Sí. La licencia incluye uso ilimitado en tus proyectos y los de tus clientes. Lo único que no puedes hacer es revender el pack como tal.</p></details>
+  <details><summary data-i18n="q3">¿Cómo recibo el pack?</summary><p data-i18n="a3">Un archivo ZIP con las 3 plantillas + guía de personalización, enviado a tu email o Telegram en menos de 12 horas tras el pago.</p></details>
+  <details><summary data-i18n="q4">¿Por qué USDT y no tarjeta?</summary><p data-i18n="a4">Para mantener el precio bajo sin comisiones de plataformas. El pago con USDT (TRC20) es rápido y cuesta centavos de comisión de red.</p></details>
+</section></div>
+
+<footer><div class="wrap">© 2026 Pack Landings Bilingües · <span data-i18n="ft">Hecho a mano, sin plantillas genéricas.</span></div></footer>
+
+<script>
+const I18N = {
+es:{navb:"Comprar — $19",badge:"🔥 Lanzamiento — 50% de descuento",
+h1:"3 landings premium <em>bilingües.</em><br/>Tuyas para siempre.",
+sub:"Plantillas profesionales español/inglés con un clic, listas para vender, captar clientes o lanzar tu negocio. Un solo archivo HTML cada una — sin WordPress, sin mensualidades, sin complicaciones.",
+cta:"Quiero el pack — $19",mini:"Pago único · Entrega en menos de 12 horas · Actualizaciones incluidas",
+t_t:"Qué incluye el pack",t_l:"Tres diseños distintos, tres nichos distintos. Abre la demo de cada uno:",
+t1t:"1 · Pulso — SaaS / Producto",t1b:"Landing oscura premium para apps y productos digitales: hero, funciones, precios, testimonios y FAQ.",
+t2t:"2 · Estudio — Freelancer",t2b:"Portafolio elegante para creativos y consultores: servicios con precios, trabajos y contacto.",
+t3t:"3 · Aroma — Negocio local",t3b:"Para cafés, restaurantes y tiendas: menú con precios, galería, reseñas y botón de WhatsApp.",
+demo:"Ver demo →",i1:"Interruptor ES/EN en las 3 plantillas",i2:"Formularios de captura configurables",i3:"100% responsive (móvil perfecto)",
+i4:"SEO básico incluido",i5:"Guía de personalización en español",i6:"Úsalas en proyectos ilimitados",
+b_t:"Cómo comprar",b_l:"Sin plataformas, sin cuentas, sin esperas.",
+b1t:"Envía 19 USDT (red TRC20)",b1b:"a esta dirección:",b2t:"Envíame el comprobante",b2b:"por Telegram con tu email:",
+b3t:"Recibe el ZIP",b3b:"Te envío el pack completo + guía en menos de 12 horas.",
+b_cta:"Ya pagué — enviar comprobante",b_g:"¿Dudas antes de comprar? Escríbeme por Telegram, respondo yo mismo.",
+f_t:"Preguntas",q1:"¿Necesito saber programar?",a1:"No. Cada plantilla tiene comentarios en español marcando qué editar: textos, colores, precios y fotos. Si sabes copiar y pegar, puedes personalizarla.",
+q2:"¿Puedo usarlas en proyectos de clientes?",a2:"Sí. La licencia incluye uso ilimitado en tus proyectos y los de tus clientes. Lo único que no puedes hacer es revender el pack como tal.",
+q3:"¿Cómo recibo el pack?",a3:"Un archivo ZIP con las 3 plantillas + guía de personalización, enviado a tu email o Telegram en menos de 12 horas tras el pago.",
+q4:"¿Por qué USDT y no tarjeta?",a4:"Para mantener el precio bajo sin comisiones de plataformas. El pago con USDT (TRC20) es rápido y cuesta centavos de comisión de red.",
+ft:"Hecho a mano, sin plantillas genéricas."},
+en:{navb:"Buy — $19",badge:"🔥 Launch — 50% off",
+h1:"3 premium <em>bilingual</em> landings.<br/>Yours forever.",
+sub:"Professional Spanish/English templates with one click, ready to sell, get clients, or launch your business. One HTML file each — no WordPress, no subscriptions, no hassle.",
+cta:"Get the pack — $19",mini:"One-time payment · Delivery within 12 hours · Updates included",
+t_t:"What's in the pack",t_l:"Three different designs, three different niches. Open each demo:",
+t1t:"1 · Pulso — SaaS / Product",t1b:"Premium dark landing for apps and digital products: hero, features, pricing, testimonials, FAQ.",
+t2t:"2 · Estudio — Freelancer",t2b:"Elegant portfolio for creatives and consultants: services with pricing, work, contact.",
+t3t:"3 · Aroma — Local business",t3b:"For cafés, restaurants, shops: menu with prices, gallery, reviews, WhatsApp button.",
+demo:"View demo →",i1:"ES/EN toggle in all 3 templates",i2:"Configurable capture forms",i3:"100% responsive (perfect mobile)",
+i4:"Basic SEO included",i5:"Customization guide in Spanish",i6:"Use in unlimited projects",
+b_t:"How to buy",b_l:"No platforms, no accounts, no waiting.",
+b1t:"Send 19 USDT (TRC20 network)",b1b:"to this address:",b2t:"Send me the receipt",b2b:"via Telegram with your email:",
+b3t:"Receive the ZIP",b3b:"I'll send the full pack + guide within 12 hours.",
+b_cta:"I paid — send receipt",b_g:"Questions before buying? Message me on Telegram, I reply personally.",
+f_t:"Questions",q1:"Do I need to know how to code?",a1:"No. Each template has Spanish comments marking what to edit: texts, colors, prices, photos. If you can copy-paste, you can customize it.",
+q2:"Can I use them in client projects?",a2:"Yes. The license includes unlimited use in your projects and your clients'. The only thing you can't do is resell the pack as-is.",
+q3:"How do I receive the pack?",a3:"A ZIP file with the 3 templates + customization guide, sent to your email or Telegram within 12 hours of payment.",
+q4:"Why USDT and not card?",a4:"To keep the price low with zero platform fees. Paying with USDT (TRC20) is fast and costs cents in network fees.",
+ft:"Handcrafted, no generic templates."}
+};
+let lang=localStorage.getItem('pck_lang')||'es';
+function setLang(l){lang=l;localStorage.setItem('pck_lang',l);document.documentElement.lang=l;
+document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.dataset.i18n;if(I18N[l][k]!==undefined)el.innerHTML=I18N[l][k];});
+bES.classList.toggle('on',l==='es');bEN.classList.toggle('on',l==='en');
+document.title=l==='es'?'Pack Landings Bilingües — 3 plantillas ES/EN por $19':'Bilingual Landings Pack — 3 ES/EN templates for $19';}
+bES.onclick=()=>setLang('es');bEN.onclick=()=>setLang('en');
+setLang(lang);
+</script>
+</body>
+</html>
