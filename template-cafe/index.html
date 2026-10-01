@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Café Aroma — Café de especialidad</title>
+<meta name="description" content="Café Aroma: café de especialidad, pan fresco y ambiente acogedor. Visítanos hoy." />
+<meta property="og:title" content="Café Aroma — Specialty Coffee" />
+<meta property="og:type" content="website" />
+<style>
+  :root{--bg:#fffaf3;--card:#ffffff;--line:#eadfcd;--txt:#3a2e22;--mut:#8a7967;--acc:#8b5a2b;--acc2:#a9713a;--cream:#f5ecdd;--r:16px}
+  *{box-sizing:border-box}html{scroll-behavior:smooth}
+  body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--txt);line-height:1.65}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+  header{position:sticky;top:0;z-index:20;background:rgba(255,250,243,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 22px}
+  .logo{font-weight:800;font-size:1.2rem}.logo i{font-style:normal;color:var(--acc)}
+  nav{display:flex;gap:20px;align-items:center}
+  nav a{color:var(--mut);text-decoration:none;font-size:.9rem}nav a:hover{color:var(--txt)}
+  .lang{display:flex;border:1px solid var(--line);border-radius:20px;overflow:hidden}
+  .lang button{background:none;border:none;color:var(--mut);padding:6px 12px;cursor:pointer;font-size:.78rem;font-weight:700}
+  .lang button.on{background:var(--acc);color:#fff}
+  .btn{display:inline-block;background:var(--acc);color:#fff;font-weight:700;padding:14px 30px;border-radius:12px;text-decoration:none;border:none;cursor:pointer;font-size:1rem}
+  .btn:hover{background:var(--acc2)}
+  .btn.wa{background:#1faa53}.btn.wa:hover{background:#25c05f}
+  .hero{background:linear-gradient(rgba(40,26,14,.72),rgba(40,26,14,.72)),linear-gradient(135deg,#6b4a2a,#3a2a18);color:#fff;text-align:center;padding:100px 22px 80px}
+  .hero .open{display:inline-block;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.35);border-radius:20px;padding:7px 18px;font-size:.85rem;margin-bottom:20px}
+  .hero .open i{display:inline-block;width:9px;height:9px;border-radius:50%;background:#4ade80;margin-right:8px;animation:bl 2s infinite}
+  @keyframes bl{50%{opacity:.4}}
+  .hero h1{font-size:clamp(2.2rem,5.5vw,3.4rem);margin:0 0 14px;line-height:1.12}
+  .hero p{color:#e8dcc8;font-size:1.12rem;max-width:560px;margin:0 auto 30px}
+  .hero .cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  section{padding:56px 0}
+  h2{font-size:1.85rem;margin:0 0 8px;text-align:center}
+  .sub2{color:var(--mut);text-align:center;max-width:620px;margin:0 auto 32px}
+  .feats{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+  .feat{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px;text-align:center}
+  .feat .ic{font-size:2rem;margin-bottom:10px}
+  .feat h3{margin:0 0 6px;font-size:1.02rem}.feat p{color:var(--mut);font-size:.9rem;margin:0}
+  .menu{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:36px;max-width:760px;margin:0 auto}
+  .mcat{margin-bottom:28px}.mcat:last-child{margin-bottom:0}
+  .mcat h3{color:var(--acc);text-transform:uppercase;letter-spacing:2px;font-size:.85rem;border-bottom:2px solid var(--cream);padding-bottom:8px;margin:0 0 14px}
+  .mitem{display:flex;justify-content:space-between;gap:14px;padding:10px 0;border-bottom:1px dashed var(--line)}
+  .mitem:last-child{border:none}
+  .mitem .n{font-weight:700}.mitem .d{color:var(--mut);font-size:.86rem}
+  .mitem .p{color:var(--acc);font-weight:800;white-space:nowrap}
+  .gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+  .gph{height:200px;border-radius:var(--r);display:flex;align-items:center;justify-content:center;font-size:3rem;color:#fff}
+  .revs{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+  .rev{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px}
+  .rev .stars{color:var(--acc)}.rev p{font-style:italic;margin:10px 0}.rev footer{color:var(--mut);font-size:.86rem}
+  .visit{background:#2c2318;color:#f2e9d8;border-radius:22px;padding:46px 40px;display:grid;grid-template-columns:1fr 1fr;gap:32px}
+  .visit h2{color:#fff;text-align:left}.visit ul{list-style:none;padding:0;color:#d8cbb4}
+  .visit li{padding:8px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+  .visit li b{color:#fff}
+  .wa-float{position:fixed;bottom:22px;right:22px;width:58px;height:58px;border-radius:50%;background:#1faa53;color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.7rem;text-decoration:none;box-shadow:0 8px 24px rgba(0,0,0,.25);z-index:30}
+  footer.site{padding:28px 0;color:var(--mut);font-size:.85rem;text-align:center;border-top:1px solid var(--line)}
+  @media(max-width:720px){nav a{display:none}.visit{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header><div class="wrap">
+  <div class="logo">CAFÉ <i>AROMA</i></div>
+  <nav>
+    <a href="#menu" data-i18n="n1">Menú</a>
+    <a href="#galeria" data-i18n="n2">Galería</a>
+    <a href="#visita" data-i18n="n3">Visítanos</a>
+    <div class="lang"><button id="bES" class="on">ES</button><button id="bEN">EN</button></div>
+  </nav>
+</div></header>
+
+<div class="hero">
+  <div class="open"><i></i><span data-i18n="open">Abierto ahora · Lun–Sáb 7:00–20:00</span></div>
+  <h1 data-i18n="h1">El mejor café de la ciudad,<br/>recién hecho.</h1>
+  <p data-i18n="sub">Granos de especialidad, pan fresco cada mañana y un rincón acogedor para trabajar o conversar.</p>
+  <div class="cta-row">
+    <a class="btn wa" href="https://wa.me/15551234567" data-i18n="cta1">📲 Pedir por WhatsApp</a>
+    <a class="btn" href="#menu" style="background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.4)" data-i18n="cta2">Ver menú</a>
+  </div>
+</div>
+
+<div class="wrap"><section>
+  <h2 data-i18n="f_t">Por qué nos eligen</h2>
+  <p class="sub2" data-i18n="f_l">No somos una cafetería más. Somos tu pausa favorita del día.</p>
+  <div class="feats">
+    <div class="feat"><div class="ic">☕</div><h3 data-i18n="f1t">Café de especialidad</h3><p data-i18n="f1b">Granos seleccionados, tostados cada semana.</p></div>
+    <div class="feat"><div class="ic">🥐</div><h3 data-i18n="f2t">Pan fresco diario</h3><p data-i18n="f2b">Horneado en casa cada mañana.</p></div>
+    <div class="feat"><div class="ic">💻</div><h3 data-i18n="f3t">Ideal para trabajar</h3><p data-i18n="f3b">WiFi rápido, enchufes y ambiente tranquilo.</p></div>
+    <div class="feat"><div class="ic">🌱</div><h3 data-i18n="f4t">Opciones veganas</h3><p data-i18n="f4b">Leches vegetales y postres sin lácteos.</p></div>
+  </div>
+</section></div>
+
+<div class="wrap"><section id="menu" style="padding-top:10px">
+  <h2 data-i18n="m_t">Nuestro menú</h2>
+  <p class="sub2" data-i18n="m_l">Precios honestos, porciones generosas.</p>
+  <div class="menu">
+    <div class="mcat"><h3 data-i18n="c1">Cafés</h3>
+      <div class="mitem"><div><div class="n">Espresso</div><div class="d" data-i18n="i1d">Intenso y corto, tueste medio</div></div><div class="p">$2.50</div></div>
+      <div class="mitem"><div><div class="n">Capuccino</div><div class="d" data-i18n="i2d">Con leche vaporizada y cacao</div></div><div class="p">$3.50</div></div>
+      <div class="mitem"><div><div class="n">Latte Aroma</div><div class="d" data-i18n="i3d">Nuestro insignia, con vainilla</div></div><div class="p">$4.00</div></div>
+    </div>
+    <div class="mcat"><h3 data-i18n="c2">Desayunos</h3>
+      <div class="mitem"><div><div class="n" data-i18n="i4n">Tostada completa</div><div class="d" data-i18n="i4d">Pan de masa madre, palta y huevo</div></div><div class="p">$6.50</div></div>
+      <div class="mitem"><div><div class="n">Croissant</div><div class="d" data-i18n="i5d">Mantequilla, recién horneado</div></div><div class="p">$3.00</div></div>
+    </div>
+    <div class="mcat"><h3 data-i18n="c3">Postres</h3>
+      <div class="mitem"><div><div class="n" data-i18n="i6n">Torta del día</div><div class="d" data-i18n="i6d">Pregunta por el sabor de hoy</div></div><div class="p">$4.50</div></div>
+    </div>
+  </div>
+</section></div>
+
+<div class="wrap"><section id="galeria" style="padding-top:10px">
+  <h2 data-i18n="g_t">El ambiente</h2>
+  <p class="sub2" data-i18n="g_l">Un vistazo a nuestro rincón.</p>
+  <div class="gal">
+    <div class="gph" style="background:linear-gradient(135deg,#8b5a2b,#5e3c1c)">☕</div>
+    <div class="gph" style="background:linear-gradient(135deg,#a9713a,#7a4f24)">🥐</div>
+    <div class="gph" style="background:linear-gradient(135deg,#6b4a2a,#453015)">🪑</div>
+    <div class="gph" style="background:linear-gradient(135deg,#96703f,#6b4e2a)">🍰</div>
+  </div>
+</section></div>
+
+<div class="wrap"><section style="padding-top:10px">
+  <h2 data-i18n="r_t">Lo que dicen</h2>
+  <div class="revs" style="margin-top:26px">
+    <div class="rev"><div class="stars">★★★★★</div><p data-i18n="r1b">"El capuccino más rico que probé en años. Y el wifi vuela."</p><footer>— <span data-i18n="r1a">Sofía G.</span></footer></div>
+    <div class="rev"><div class="stars">★★★★★</div><p data-i18n="r2b">"Mi oficina favorita. Vengo todas las mañanas."</p><footer>— <span data-i18n="r2a">Martín P.</span></footer></div>
+    <div class="rev"><div class="stars">★★★★★</div><p data-i18n="r3b">"La torta del día nunca decepciona."</p><footer>— <span data-i18n="r3a">Lucía F.</span></footer></div>
+  </div>
+</section></div>
+
+<div class="wrap"><section id="visita" style="padding-top:10px">
+  <div class="visit">
+    <div>
+      <h2 data-i18n="v_t">Visítanos</h2>
+      <ul>
+        <li>📍 <b data-i18n="v_a1">Calle Principal 123, Centro</b></li>
+        <li>🕐 <b data-i18n="v_h1">Lun–Sáb: 7:00 – 20:00</b></li>
+        <li>🕐 <b data-i18n="v_h2">Dom: 8:00 – 14:00</b></li>
+        <li>📞 <b>+1 555 123 4567</b></li>
+      </ul>
+    </div>
+    <div style="display:flex;flex-direction:column;justify-content:center;gap:14px">
+      <p style="color:#d8cbb4;margin:0" data-i18n="v_b">¿Antojo de algo? Pide por WhatsApp y lo tenemos listo cuando llegues.</p>
+      <a class="btn wa" href="https://wa.me/15551234567" data-i18n="v_cta">📲 Pedir ahora</a>
+    </div>
+  </div>
+</section></div>
+
+<a class="wa-float" href="https://wa.me/15551234567">💬</a>
+
+<footer class="site"><div class="wrap">© 2026 Café Aroma · <span data-i18n="ft">Hecho con amor y cafeína.</span></div></footer>
+
+<script>
+const I18N = {
+es:{n1:"Menú",n2:"Galería",n3:"Visítanos",open:"Abierto ahora · Lun–Sáb 7:00–20:00",
+h1:"El mejor café de la ciudad,<br/>recién hecho.",sub:"Granos de especialidad, pan fresco cada mañana y un rincón acogedor para trabajar o conversar.",
+cta1:"📲 Pedir por WhatsApp",cta2:"Ver menú",
+f_t:"Por qué nos eligen",f_l:"No somos una cafetería más. Somos tu pausa favorita del día.",
+f1t:"Café de especialidad",f1b:"Granos seleccionados, tostados cada semana.",f2t:"Pan fresco diario",f2b:"Horneado en casa cada mañana.",
+f3t:"Ideal para trabajar",f3b:"WiFi rápido, enchufes y ambiente tranquilo.",f4t:"Opciones veganas",f4b:"Leches vegetales y postres sin lácteos.",
+m_t:"Nuestro menú",m_l:"Precios honestos, porciones generosas.",c1:"Cafés",c2:"Desayunos",c3:"Postres",
+i1d:"Intenso y corto, tueste medio",i2d:"Con leche vaporizada y cacao",i3d:"Nuestro insignia, con vainilla",
+i4n:"Tostada completa",i4d:"Pan de masa madre, palta y huevo",i5d:"Mantequilla, recién horneado",i6n:"Torta del día",i6d:"Pregunta por el sabor de hoy",
+g_t:"El ambiente",g_l:"Un vistazo a nuestro rincón.",r_t:"Lo que dicen",
+r1b:"\"El capuccino más rico que probé en años. Y el wifi vuela.\"",r1a:"Sofía G.",
+r2b:"\"Mi oficina favorita. Vengo todas las mañanas.\"",r2a:"Martín P.",r3b:"\"La torta del día nunca decepciona.\"",r3a:"Lucía F.",
+v_t:"Visítanos",v_a1:"Calle Principal 123, Centro",v_h1:"Lun–Sáb: 7:00 – 20:00",v_h2:"Dom: 8:00 – 14:00",
+v_b:"¿Antojo de algo? Pide por WhatsApp y lo tenemos listo cuando llegues.",v_cta:"📲 Pedir ahora",ft:"Hecho con amor y cafeína."},
+en:{n1:"Menu",n2:"Gallery",n3:"Visit us",open:"Open now · Mon–Sat 7:00 AM–8:00 PM",
+h1:"The best coffee in town,<br/>freshly brewed.",sub:"Specialty beans, fresh bread every morning, and a cozy corner to work or chat.",
+cta1:"📲 Order on WhatsApp",cta2:"See menu",
+f_t:"Why they choose us",f_l:"We're not just another café. We're your favorite break of the day.",
+f1t:"Specialty coffee",f1b:"Selected beans, roasted weekly.",f2t:"Fresh bread daily",f2b:"Baked in-house every morning.",
+f3t:"Great for working",f3b:"Fast WiFi, outlets, and a calm vibe.",f4t:"Vegan options",f4b:"Plant milks and dairy-free desserts.",
+m_t:"Our menu",m_l:"Honest prices, generous portions.",c1:"Coffees",c2:"Breakfast",c3:"Desserts",
+i1d:"Bold and short, medium roast",i2d:"With steamed milk and cocoa",i3d:"Our signature, with vanilla",
+i4n:"Full toast",i4d:"Sourdough, avocado, and egg",i5d:"Butter, fresh from the oven",i6n:"Cake of the day",i6d:"Ask about today's flavor",
+g_t:"The vibe",g_l:"A peek at our corner.",r_t:"What people say",
+r1b:"\"The best cappuccino I've had in years. And the wifi flies.\"",r1a:"Sofía G.",
+r2b:"\"My favorite office. I come every morning.\"",r2a:"Martín P.",r3b:"\"The cake of the day never disappoints.\"",r3a:"Lucía F.",
+v_t:"Visit us",v_a1:"123 Main Street, Downtown",v_h1:"Mon–Sat: 7:00 AM – 8:00 PM",v_h2:"Sun: 8:00 AM – 2:00 PM",
+v_b:"Craving something? Order on WhatsApp and it'll be ready when you arrive.",v_cta:"📲 Order now",ft:"Made with love and caffeine."}
+};
+let lang=localStorage.getItem('arm_lang')||'es';
+function setLang(l){lang=l;localStorage.setItem('arm_lang',l);document.documentElement.lang=l;
+document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.dataset.i18n;if(I18N[l][k]!==undefined)el.innerHTML=I18N[l][k];});
+bES.classList.toggle('on',l==='es');bEN.classList.toggle('on',l==='en');
+document.title=l==='es'?'Café Aroma — Café de especialidad':'Café Aroma — Specialty Coffee';}
+bES.onclick=()=>setLang('es');bEN.onclick=()=>setLang('en');
+setLang(lang);
+</script>
+</body>
+</html>
