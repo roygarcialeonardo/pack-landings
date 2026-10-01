@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Alex Rivera — Diseñador web freelance</title>
+<meta name="description" content="Diseñador web freelance: sitios rápidos, bilingües y que venden. Reserva tu proyecto hoy." />
+<meta property="og:title" content="Alex Rivera — Freelance Web Designer" />
+<meta property="og:type" content="website" />
+<style>
+  :root{--bg:#faf7f2;--card:#ffffff;--line:#e9e0d2;--txt:#23201a;--mut:#7a7264;--acc:#c4552d;--acc2:#e0703f;--dark:#23201a;--r:14px}
+  *{box-sizing:border-box}html{scroll-behavior:smooth}
+  body{margin:0;font-family:Georgia,'Times New Roman',serif;background:var(--bg);color:var(--txt);line-height:1.7}
+  body,input,button,textarea{font-family:Georgia,'Times New Roman',serif}
+  .sans,nav,.btn,.tag,.lang button{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  .wrap{max-width:1000px;margin:0 auto;padding:0 22px}
+  header{position:sticky;top:0;z-index:20;background:rgba(250,247,242,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 22px}
+  .logo{font-weight:700;font-size:1.15rem;font-style:italic}
+  nav{display:flex;gap:20px;align-items:center}
+  nav a{color:var(--mut);text-decoration:none;font-size:.88rem}nav a:hover{color:var(--txt)}
+  .lang{display:flex;border:1px solid var(--line);border-radius:20px;overflow:hidden}
+  .lang button{background:none;border:none;color:var(--mut);padding:6px 12px;cursor:pointer;font-size:.78rem;font-weight:700}
+  .lang button.on{background:var(--acc);color:#fff}
+  .btn{display:inline-block;background:var(--acc);color:#fff;font-weight:700;padding:13px 28px;border-radius:30px;text-decoration:none;border:none;cursor:pointer;font-size:.95rem}
+  .btn:hover{background:var(--acc2)}
+  .btn.ol{background:none;border:1.5px solid var(--acc);color:var(--acc)}
+  .hero{padding:80px 0 50px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+  .photo{width:280px;height:280px;border-radius:50%;background:linear-gradient(135deg,#e8dcc8,#d9c7a8);display:flex;align-items:center;justify-content:center;font-size:5rem;margin:0 auto;border:6px solid #fff;box-shadow:0 20px 50px rgba(0,0,0,.1)}
+  .kicker{color:var(--acc);font-weight:700;letter-spacing:2px;font-size:.8rem;text-transform:uppercase}
+  h1{font-size:clamp(2rem,4.6vw,2.9rem);line-height:1.15;margin:12px 0}
+  h1 em{font-style:italic;color:var(--acc)}
+  .sub{color:var(--mut);font-size:1.08rem;margin:0 0 26px}
+  .cta-row{display:flex;gap:12px;flex-wrap:wrap}
+  .stats{display:flex;gap:36px;margin-top:30px;flex-wrap:wrap}
+  .stats div b{font-size:1.7rem;display:block}.stats div span{color:var(--mut);font-size:.85rem}
+  section{padding:52px 0}
+  h2{font-size:1.9rem;margin:0 0 8px}
+  .rule{width:60px;height:3px;background:var(--acc);margin:0 0 26px}
+  .servs{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+  .serv{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:28px}
+  .serv .pr{color:var(--acc);font-weight:700;font-size:1.05rem;margin-top:12px}
+  .serv h3{margin:0 0 8px}.serv p{color:var(--mut);font-size:.95rem;margin:0}
+  .works{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+  .work{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+  .work .img{height:180px;background:linear-gradient(135deg,#d9c7a8,#c9b48f);display:flex;align-items:center;justify-content:center;font-size:3rem}
+  .work:nth-child(2) .img{background:linear-gradient(135deg,#c8d4e0,#a9bccd)}
+  .work:nth-child(3) .img{background:linear-gradient(135deg,#e0c8c8,#cda9a9)}
+  .work .bd{padding:20px}.work .bd h3{margin:0 0 6px}.work .bd p{color:var(--mut);font-size:.9rem;margin:0 0 10px}
+  .tag{display:inline-block;background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:3px 10px;font-size:.75rem;color:var(--mut);margin-right:6px}
+  .testis{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+  .testi{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px;font-style:italic}
+  .testi footer{font-style:normal;color:var(--mut);font-size:.88rem;margin-top:12px}
+  .stars{color:var(--acc)}
+  .contact{background:var(--dark);color:#f5f1e8;border-radius:22px;padding:50px 40px;display:grid;grid-template-columns:1fr 1fr;gap:36px}
+  .contact h2{color:#fff}.contact .rule{background:var(--acc2)}
+  .contact p{color:#b9b2a2}
+  form.cform{display:flex;flex-direction:column;gap:12px}
+  form.cform input,form.cform textarea{padding:13px 16px;border-radius:10px;border:1px solid #3a352c;background:#2e2a22;color:#f5f1e8;font-size:.95rem}
+  form.cform textarea{min-height:110px;resize:vertical}
+  #ok{display:none;color:#7fd6a4;font-weight:700}
+  footer.site{padding:28px 0;color:var(--mut);font-size:.85rem;text-align:center;border-top:1px solid var(--line);margin-top:20px}
+  .avail{display:inline-flex;align-items:center;gap:8px;background:#e8f5ec;color:#1e7a46;border-radius:20px;padding:6px 16px;font-size:.83rem;font-weight:700;margin-bottom:14px}
+  .avail i{width:9px;height:9px;border-radius:50%;background:#2ea968;display:block;animation:bl 2s infinite}
+  @keyframes bl{50%{opacity:.4}}
+  @media(max-width:720px){.hero,.contact{grid-template-columns:1fr}nav a{display:none}.photo{width:200px;height:200px}}
+</style>
+</head>
+<body>
+
+<header><div class="wrap">
+  <div class="logo">Alex Rivera</div>
+  <nav>
+    <a href="#serv" data-i18n="n1">Servicios</a>
+    <a href="#work" data-i18n="n2">Trabajos</a>
+    <a href="#contact" data-i18n="n3">Contacto</a>
+    <div class="lang"><button id="bES" class="on">ES</button><button id="bEN">EN</button></div>
+  </nav>
+</div></header>
+
+<div class="wrap"><div class="hero">
+  <div>
+    <div class="avail"><i></i><span data-i18n="av">Disponible para proyectos</span></div>
+    <div class="kicker" data-i18n="kick">Diseñador web freelance</div>
+    <h1 data-i18n="h1">Sitios que se ven bien <em>y venden bien.</em></h1>
+    <p class="sub" data-i18n="sub">Diseño páginas rápidas y bilingües para freelancers y negocios que quieren clientes, no solo visitas.</p>
+    <div class="cta-row">
+      <a class="btn" href="#contact" data-i18n="cta1">Reservar proyecto</a>
+      <a class="btn ol" href="#work" data-i18n="cta2">Ver trabajos</a>
+    </div>
+    <div class="stats">
+      <div><b>40+</b><span data-i18n="st1">proyectos entregados</span></div>
+      <div><b>6</b><span data-i18n="st2">años de experiencia</span></div>
+      <div><b>98%</b><span data-i18n="st3">clientes satisfechos</span></div>
+    </div>
+  </div>
+  <div><div class="photo">👨‍💻</div></div>
+</div></div>
+
+<div class="wrap"><section id="serv">
+  <h2 data-i18n="s_t">Servicios</h2><div class="rule"></div>
+  <div class="servs">
+    <div class="serv"><h3 data-i18n="s1t">Landing page</h3><p data-i18n="s1b">Página de venta o captación, optimizada para convertir visitas en clientes. Entrega en 7 días.</p><div class="pr" data-i18n="s1p">desde $150</div></div>
+    <div class="serv"><h3 data-i18n="s2t">Sitio completo</h3><p data-i18n="s2b">Sitio de 5-8 páginas con blog, portafolio y contacto. Ideal para estudios y consultoras.</p><div class="pr" data-i18n="s2p">desde $400</div></div>
+    <div class="serv"><h3 data-i18n="s3t">Rediseño</h3><p data-i18n="s3b">Tu sitio actual, pero rápido, moderno y bilingüe. Auditoría incluida.</p><div class="pr" data-i18n="s3p">desde $250</div></div>
+  </div>
+</section></div>
+
+<div class="wrap"><section id="work">
+  <h2 data-i18n="w_t">Trabajos seleccionados</h2><div class="rule"></div>
+  <div class="works">
+    <div class="work"><div class="img">🛍️</div><div class="bd"><h3 data-i18n="w1t">Tienda Nube Viva</h3><p data-i18n="w1b">E-commerce bilingüe para marca de ropa. +60% ventas en 3 meses.</p><span class="tag">E-commerce</span><span class="tag">ES/EN</span></div></div>
+    <div class="work"><div class="img">📊</div><div class="bd"><h3 data-i18n="w2t">Consultora Prisma</h3><p data-i18n="w2b">Sitio corporativo con blog y captación de leads.</p><span class="tag">Corporativo</span><span class="tag">SEO</span></div></div>
+    <div class="work"><div class="img">🎨</div><div class="bd"><h3 data-i18n="w3t">Portafolio Luna</h3><p data-i18n="w3b">Portafolio para ilustradora con galería y tienda.</p><span class="tag">Portafolio</span><span class="tag">Galería</span></div></div>
+  </div>
+</section></div>
+
+<div class="wrap"><section>
+  <h2 data-i18n="t_t">Lo que dicen mis clientes</h2><div class="rule"></div>
+  <div class="testis">
+    <div class="testi"><div class="stars">★★★★★</div><p data-i18n="t1b">"Entendió mi negocio mejor que yo. La página nueva triplicó mis consultas."</p><footer>— <span data-i18n="t1a">Carla M., coach</span></footer></div>
+    <div class="testi"><div class="stars">★★★★★</div><p data-i18n="t2b">"Rápido, claro y sin tecnicismos. El sitio bilingüe nos abrió clientes en EE.UU."</p><footer>— <span data-i18n="t2a">Diego R., consultor</span></footer></div>
+  </div>
+</section></div>
+
+<div class="wrap"><section id="contact">
+  <div class="contact">
+    <div>
+      <h2 data-i18n="c_t">¿Trabajamos juntos?</h2><div class="rule"></div>
+      <p data-i18n="c_b">Cuéntame de tu proyecto: qué necesitas, para cuándo y tu presupuesto aproximado. Respondo en menos de 24 horas.</p>
+      <p style="margin-top:20px">✉️ <span data-i18n="c_e">hola@alexrivera.com</span><br/>💬 Telegram: @alexrivera</p>
+    </div>
+    <form class="cform" id="f1">
+      <input required data-i18n-ph="f_n" placeholder="Tu nombre" />
+      <input type="email" required data-i18n-ph="f_e" placeholder="tu@correo.com" />
+      <textarea required data-i18n-ph="f_m" placeholder="Cuéntame de tu proyecto..."></textarea>
+      <button class="btn" type="submit" data-i18n="c_cta">Enviar mensaje</button>
+      <div id="ok" data-i18n="ok">¡Mensaje enviado! Te respondo en 24h.</div>
+    </form>
+  </div>
+</section></div>
+
+<footer class="site"><div class="wrap">© 2026 Alex Rivera · <span data-i18n="ft">Diseño web que vende.</span></div></footer>
+
+<script>
+const CONFIG = { formEndpoint:'', contactEmail:'' };
+const I18N = {
+es:{n1:"Servicios",n2:"Trabajos",n3:"Contacto",av:"Disponible para proyectos",kick:"Diseñador web freelance",
+h1:"Sitios que se ven bien <em>y venden bien.</em>",sub:"Diseño páginas rápidas y bilingües para freelancers y negocios que quieren clientes, no solo visitas.",
+cta1:"Reservar proyecto",cta2:"Ver trabajos",st1:"proyectos entregados",st2:"años de experiencia",st3:"clientes satisfechos",
+s_t:"Servicios",s1t:"Landing page",s1b:"Página de venta o captación, optimizada para convertir visitas en clientes. Entrega en 7 días.",s1p:"desde $150",
+s2t:"Sitio completo",s2b:"Sitio de 5-8 páginas con blog, portafolio y contacto. Ideal para estudios y consultoras.",s2p:"desde $400",
+s3t:"Rediseño",s3b:"Tu sitio actual, pero rápido, moderno y bilingüe. Auditoría incluida.",s3p:"desde $250",
+w_t:"Trabajos seleccionados",w1t:"Tienda Nube Viva",w1b:"E-commerce bilingüe para marca de ropa. +60% ventas en 3 meses.",
+w2t:"Consultora Prisma",w2b:"Sitio corporativo con blog y captación de leads.",w3t:"Portafolio Luna",w3b:"Portafolio para ilustradora con galería y tienda.",
+t_t:"Lo que dicen mis clientes",t1b:"\"Entendió mi negocio mejor que yo. La página nueva triplicó mis consultas.\"",t1a:"Carla M., coach",
+t2b:"\"Rápido, claro y sin tecnicismos. El sitio bilingüe nos abrió clientes en EE.UU.\"",t2a:"Diego R., consultor",
+c_t:"¿Trabajamos juntos?",c_b:"Cuéntame de tu proyecto: qué necesitas, para cuándo y tu presupuesto aproximado. Respondo en menos de 24 horas.",
+c_e:"hola@alexrivera.com",f_n:"Tu nombre",f_e:"tu@correo.com",f_m:"Cuéntame de tu proyecto...",c_cta:"Enviar mensaje",
+ok:"¡Mensaje enviado! Te respondo en 24h.",ft:"Diseño web que vende."},
+en:{n1:"Services",n2:"Work",n3:"Contact",av:"Available for projects",kick:"Freelance web designer",
+h1:"Websites that look good <em>and sell well.</em>",sub:"I design fast, bilingual pages for freelancers and businesses that want clients, not just visits.",
+cta1:"Book a project",cta2:"See my work",st1:"projects delivered",st2:"years of experience",st3:"happy clients",
+s_t:"Services",s1t:"Landing page",s1b:"Sales or lead-capture page, optimized to turn visitors into clients. Delivered in 7 days.",s1p:"from $150",
+s2t:"Full website",s2b:"5-8 page site with blog, portfolio, and contact. Ideal for studios and consultancies.",s2p:"from $400",
+s3t:"Redesign",s3b:"Your current site, but fast, modern, and bilingual. Audit included.",s3p:"from $250",
+w_t:"Selected work",w1t:"Nube Viva Store",w1b:"Bilingual e-commerce for a clothing brand. +60% sales in 3 months.",
+w2t:"Prisma Consulting",w2b:"Corporate site with blog and lead capture.",w3t:"Luna Portfolio",w3b:"Portfolio for an illustrator with gallery and shop.",
+t_t:"What clients say",t1b:"\"He understood my business better than I did. The new page tripled my inquiries.\"",t1a:"Carla M., coach",
+t2b:"\"Fast, clear, no jargon. The bilingual site opened US clients for us.\"",t2a:"Diego R., consultant",
+c_t:"Shall we work together?",c_b:"Tell me about your project: what you need, your timeline, and approximate budget. I reply within 24 hours.",
+c_e:"hello@alexrivera.com",f_n:"Your name",f_e:"you@email.com",f_m:"Tell me about your project...",c_cta:"Send message",
+ok:"Message sent! I'll reply within 24h.",ft:"Web design that sells."}
+};
+let lang=localStorage.getItem('est_lang')||'es';
+function setLang(l){lang=l;localStorage.setItem('est_lang',l);document.documentElement.lang=l;
+document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.dataset.i18n;if(I18N[l][k]!==undefined)el.innerHTML=I18N[l][k];});
+document.querySelectorAll('[data-i18n-ph]').forEach(el=>{const k=el.dataset.i18nPh;if(I18N[l][k]!==undefined)el.placeholder=I18N[l][k];});
+bES.classList.toggle('on',l==='es');bEN.classList.toggle('on',l==='en');
+document.title=l==='es'?'Alex Rivera — Diseñador web freelance':'Alex Rivera — Freelance Web Designer';}
+bES.onclick=()=>setLang('es');bEN.onclick=()=>setLang('en');
+f1.addEventListener('submit',async e=>{e.preventDefault();const d={name:e.target[0].value,email:e.target[1].value,message:e.target[2].value,lang};const okm=document.getElementById('ok');
+try{if(CONFIG.formEndpoint){await fetch(CONFIG.formEndpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)});}
+else if(CONFIG.contactEmail){location.href='mailto:'+CONFIG.contactEmail+'?subject='+encodeURIComponent('Proyecto web — '+d.name)+'&body='+encodeURIComponent(d.message+'\n\n— '+d.name+' ('+d.email+')');}else{alert('CONFIG sin endpoint (ver comentarios).');return;}
+okm.style.display='block';e.target.reset();setTimeout(()=>okm.style.display='none',5000);}catch(err){alert(err.message);}});
+setLang(lang);
+</script>
+</body>
+</html>
